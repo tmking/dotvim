@@ -35,4 +35,4 @@ set number
 "set laststatus=2
 set statusline=%<%F%=\ [%M%R%H%Y]\ (%(%l,%c%))
 
-colorscheme twilight
+colorscheme jellybeans
