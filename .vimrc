@@ -1,5 +1,3 @@
-colorscheme jellybeans
-
 set ts=2
 syntax on
 
@@ -37,4 +35,4 @@ set number
 "set laststatus=2
 set statusline=%<%F%=\ [%M%R%H%Y]\ (%(%l,%c%))
 
-
+colorscheme twilight
