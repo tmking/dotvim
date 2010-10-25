@@ -30,7 +30,19 @@ set backspace=indent,eol,start
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+" show line number
 set number
+
+" swap file directory
+set directory=$HOME/.vim/tmp
+
+" backup file directory
+set backupdir=$HOME/.vim/tmp
+
+" swap file directory
+set directory=$HOME/.vim/tmp
+
+
 
 "set laststatus=2
 set statusline=%<%F%=\ [%M%R%H%Y]\ (%(%l,%c%))
