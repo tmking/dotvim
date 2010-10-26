@@ -42,7 +42,7 @@ set backupdir=$HOME/.vim/tmp
 " swap file directory
 set directory=$HOME/.vim/tmp
 
-
+set smartindent
 
 "set laststatus=2
 set statusline=%<%F%=\ [%M%R%H%Y]\ (%(%l,%c%))
