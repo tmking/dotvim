@@ -13,3 +13,9 @@
 [submodule "bundle/pathogen"]
 	path = bundle/pathogen
 	url = http://github.com/tpope/vim-pathogen.git
+[submodule "bundle/scratch"]
+	path = bundle/scratch
+	url = http://github.com/chrismetcalf/vim-scratch.git
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = http://github.com/tomtom/tcomment_vim.git
