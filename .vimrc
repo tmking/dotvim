@@ -1,11 +1,7 @@
-set ts=2
 syntax on
 
 " hide buffers
-set hidden
-
-" set auto-indenting on for programming
-set ai
+"set hidden
 
 " turn off compatibility with the old vi
 "set nocompatible
@@ -14,7 +10,7 @@ set ai
 set vb
 
 " do not highlight words when searching for them. it's distracting.
-set nohlsearch
+"set nohlsearch
 
 " automatically show matching brackets. works like it does in bbedit.
 set showmatch
@@ -42,9 +38,32 @@ set backupdir=$HOME/.vim/tmp
 " swap file directory
 set directory=$HOME/.vim/tmp
 
-set smartindent
+" indentation options
+set tabstop=2
+set smarttab
+set shiftwidth=2
+set autoindent
+set expandtab
+"set backspace=start,indent
 
 "set laststatus=2
 set statusline=%<%F%=\ [%M%R%H%Y]\ (%(%l,%c%))
 
 colorscheme vilight
+
+" automatically strip trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
+" use ack instead of grep
+set grepprg=ack
+set grepformat=%f:%l:%m
+
+function! ToggleScratch()
+  if expand('%') == g:ScratchBufferName
+    quit
+  else
+    Sscratch
+  endif
+endfunction
+
+map <leader>s :call ToggleScratch()<CR>
