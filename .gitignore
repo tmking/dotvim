@@ -1,4 +1,5 @@
 .*.swp
 .netrwhist
-tmp/
+tmp/*
+!tmp/.keep
 tags/
