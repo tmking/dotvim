@@ -49,7 +49,7 @@ set expandtab
 "set laststatus=2
 set statusline=%<%F%=\ [%M%R%H%Y]\ (%(%l,%c%))
 
-colorscheme vilight
+colorscheme desert
 
 " automatically strip trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
