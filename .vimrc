@@ -4,7 +4,7 @@ syntax on
 set nohidden
 
 " turn off compatibility with the old vi
-"set nocompatible
+set nocompatible
 
 " turn on the "visual bell" - which is much quieter than the "audio blink"
 set vb
@@ -33,8 +33,8 @@ set tags=$HOME/.vim/docs/mytags
 
 " pathogen
 filetype off
-call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 filetype plugin indent on
 
 " show line number
@@ -60,6 +60,9 @@ set visualbell
 set nocursorline
 set ttyfast
 set ruler
+
+" set leader key
+let mapleader=','
 
 " search options
 nnoremap / /\v
@@ -108,8 +111,8 @@ map <leader>s :call ToggleScratch()<CR>
 " ii to leave insert mode
 inoremap ii <ESC>
 " map common commands to upercase equivs
-command W w
-command Q q
+command! W w
+command! Q q
 " keybindings for newbies from http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -127,3 +130,31 @@ if v:version >=703
   set undofile
   set undodir=$HOME/.vim/tmp/undo
 endif
+
+" status line
+set laststatus=2
+set statusline=%t%m%r%h%w\ %y\ %{synIDattr(synID(line('.'),col('.'),0),'name')}%=%030(%-15(%4l/%L,%c%V%)%=%p%%%)
+
+au! BufNewFile,BufRead .rvmrc set filetype=zsh
+
+function! SuperCleverTab()
+   "check if at beginning of line or after a space
+    if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+      return "\<Tab>"
+    else
+       " do we have omni completion available
+       if &omnifunc != ''
+          "use omni-completion
+          return "\<C-X>\<C-O>"
+       elseif &dictionary != ''
+          " no omni completion, try dictionary completion
+          return "\<C-K>"
+       else
+          "use omni completion or dictionary completion
+          "use known-word completion
+          return "\<C-N>"
+      endif
+    endif
+endfunction
+" bind function to the tab key
+inoremap <Tab> <C-R>=SuperCleverTab()<cr>

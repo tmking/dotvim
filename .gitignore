@@ -3,3 +3,4 @@
 tmp/*
 !tmp/.keep
 tags/
+bundle/*/doc/tags

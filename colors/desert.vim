@@ -76,8 +76,8 @@ hi MoreMsg       ctermfg=darkgreen
 hi ModeMsg       cterm=NONE ctermfg=brown
 hi LineNr        ctermfg=darkgrey
 hi Question      ctermfg=green
-hi StatusLine    cterm=bold,reverse
-hi StatusLineNC  cterm=reverse
+hi StatusLine    ctermfg=236   ctermbg=186
+"hi StatusLineNC  cterm=reverse
 hi VertSplit     cterm=reverse
 hi Title         ctermfg=5
 hi Visual        cterm=reverse
