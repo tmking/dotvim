@@ -1,4 +1,4 @@
-set guifont=Inconsolata:h16
+set guifont=Menlo:h12
 set guioptions-=T
 set transparency=6
 colorscheme twilight
