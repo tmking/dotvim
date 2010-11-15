@@ -4,9 +4,6 @@
 [submodule "bundle/rails"]
 	path = bundle/rails
 	url = http://github.com/tpope/vim-rails.git
-[submodule "bundle/surround"]
-	path = bundle/surround
-	url = http://github.com/tpope/vim-surround.git
 [submodule "bundle/twilight"]
 	path = bundle/twilight
 	url = git@github.com:lordzork/vim-twilight.git
