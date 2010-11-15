@@ -108,11 +108,12 @@ endfunction
 """"""""""""""""
 " leader+s to toggle scratch
 map <leader>s :call ToggleScratch()<CR>
-" ii to leave insert mode
-inoremap ii <ESC>
+" kk to leave insert mode
+inoremap kk <ESC>
 " map common commands to upercase equivs
 command! W w
 command! Q q
+command! Clearsearch let @/ = ""
 " keybindings for newbies from http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -124,7 +125,10 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
-
+map <leader><TAB> :NERDTreeToggle<cr>
+map <leader>b :buffers<cr>
+map <leader>j :bp<cr>
+map <leader>k :bn<cr>
 " use undo files
 if v:version >=703
   set undofile
@@ -156,5 +160,6 @@ function! SuperCleverTab()
       endif
     endif
 endfunction
+
 " bind function to the tab key
 inoremap <Tab> <C-R>=SuperCleverTab()<cr>
