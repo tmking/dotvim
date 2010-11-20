@@ -86,7 +86,11 @@ set formatoptions=qrn1
 "set laststatus=2
 set statusline=%<%F%=\ [%M%R%H%Y]\ (%(%l,%c%))
 
-colorscheme desert
+if has ("gui_macvim")
+  colorscheme twilight
+else
+  colorscheme desert
+endif
 
 " automatically strip trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
@@ -140,6 +144,8 @@ set laststatus=2
 set statusline=%t%m%r%h%w\ %y\ %{synIDattr(synID(line('.'),col('.'),0),'name')}%=%030(%-15(%4l/%L,%c%V%)%=%p%%%)
 
 au! BufNewFile,BufRead .rvmrc set filetype=zsh
+au! BufNewFile,BufRead Gemfile set filetype=ruby
+
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
@@ -166,3 +172,9 @@ endfunction
 
 " bind function to the tab key
 inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+
+" for text bubbling
+nmap <leader><Up> ddkP
+nmap <leader><Down> ddp
+vmap <leader><Up> xkP`[V`]
+vmap <leader><Down> xk`[V`]
