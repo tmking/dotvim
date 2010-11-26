@@ -40,6 +40,10 @@ filetype plugin indent on
 " show line number
 set number
 
+" filetypes to ignore
+set wildignore=*.bak,*.zwc
+set suffixes=.bak,~,.o,.h,.info,.swp,.obj,.info,.aux,.log,.dvi,.bbl,.out,.o,.lo,.zwc
+
 " indentation options
 set tabstop=2
 set smarttab
@@ -144,7 +148,7 @@ set laststatus=2
 set statusline=%t%m%r%h%w\ %y\ %{synIDattr(synID(line('.'),col('.'),0),'name')}%=%030(%-15(%4l/%L,%c%V%)%=%p%%%)
 
 au! BufNewFile,BufRead .rvmrc set filetype=zsh
-au! BufNewFile,BufRead Gemfile set filetype=ruby
+au! BufNewFile,BufRead Gemfile,*.ru set filetype=ruby
 
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
