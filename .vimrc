@@ -46,7 +46,8 @@ set suffixes=.bak,~,.o,.h,.info,.swp,.obj,.info,.aux,.log,.dvi,.bbl,.out,.o,.lo,
 
 " indentation options
 set tabstop=2
-set smarttab
+set softtabstop=2
+"set smarttab
 set shiftwidth=2
 set autoindent
 set expandtab
