@@ -45,9 +45,9 @@ set wildignore=*.bak,*.zwc
 set suffixes=.bak,~,.o,.h,.info,.swp,.obj,.info,.aux,.log,.dvi,.bbl,.out,.o,.lo,.zwc
 
 " indentation options
+set smartindent
 set tabstop=2
 set softtabstop=2
-"set smarttab
 set shiftwidth=2
 set autoindent
 set expandtab
@@ -155,6 +155,7 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
+autocmd FileType haml setlocal ts=2 sts=2 sw=2 expandtab
 function! SuperCleverTab()
    "check if at beginning of line or after a space
     if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
