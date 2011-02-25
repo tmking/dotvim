@@ -41,7 +41,7 @@ filetype plugin indent on
 set number
 
 " filetypes to ignore
-set wildignore=*.bak,*.zwc
+set wildignore=*.bak,*.zwc,config.ru
 set suffixes=.bak,~,.o,.h,.info,.swp,.obj,.info,.aux,.log,.dvi,.bbl,.out,.o,.lo,.zwc
 
 " indentation options
