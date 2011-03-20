@@ -150,6 +150,7 @@ set statusline=%t%m%r%h%w\ %y\ %{synIDattr(synID(line('.'),col('.'),0),'name')}%
 
 au! BufNewFile,BufRead .rvmrc set filetype=zsh
 au! BufNewFile,BufRead Gemfile,*.ru set filetype=ruby
+au FileType crontab set nobackup nowritebackup
 
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
