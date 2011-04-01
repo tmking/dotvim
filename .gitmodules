@@ -22,3 +22,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "colors/solarized"]
+	path = colors/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
