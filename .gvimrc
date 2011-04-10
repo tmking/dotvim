@@ -1,6 +1,6 @@
 set guifont=Menlo:h13
 set guioptions-=T
-set transparency=6
+set transparency=4
 set guioptions-=L
 set ls=2 " Always show status line
 set cursorline
