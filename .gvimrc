@@ -1,4 +1,4 @@
-set guifont=Menlo:h13
+set guifont=Menlo:h14
 set guioptions-=T
 set transparency=4
 set guioptions-=L
