@@ -149,6 +149,7 @@ set laststatus=2
 set statusline=%t%m%r%h%w\ %y\ %{synIDattr(synID(line('.'),col('.'),0),'name')}%=%030(%-15(%4l/%L,%c%V%)%=%p%%%)
 
 au! BufNewFile,BufRead .rvmrc set filetype=zsh
+au! BufNewFile,BufRead ~/.zsh/* set filetype=zsh
 au! BufNewFile,BufRead Gemfile,*.ru set filetype=ruby
 au FileType crontab set nobackup nowritebackup
 
