@@ -41,8 +41,8 @@ hi NonText	guifg=LightBlue guibg=grey30
 hi Question	guifg=springgreen
 hi Search	guibg=peru guifg=wheat
 hi SpecialKey	guifg=yellowgreen
-hi StatusLine	guibg=#c2bfa5 guifg=black gui=none
-hi StatusLineNC	guibg=#c2bfa5 guifg=grey50 gui=none
+"hi StatusLineNC	guibg=#c2bfa5 guifg=black gui=none
+"hi StatusLine	guibg=#c2bfa5 guifg=grey50 gui=none
 hi Title	guifg=indianred
 hi Visual	gui=none guifg=khaki guibg=olivedrab
 "hi VisualNOS
@@ -76,7 +76,7 @@ hi MoreMsg       ctermfg=darkgreen
 hi ModeMsg       cterm=NONE ctermfg=brown
 hi LineNr        ctermfg=darkgrey
 hi Question      ctermfg=green
-hi StatusLine    ctermfg=0 ctermbg=white
+"hi StatusLine    ctermfg=0 ctermbg=white
 "hi StatusLineNC  cterm=reverse
 hi VertSplit     cterm=reverse
 hi Title         ctermfg=5

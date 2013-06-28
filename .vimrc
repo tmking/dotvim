@@ -94,7 +94,7 @@ set statusline=%<%F%=\ [%M%R%H%Y]\ (%(%l,%c%))
 if has ("gui_macvim")
   colorscheme twilight
 else
-  colorscheme desert
+  colorscheme desert256
 endif
 
 " automatically strip trailing whitespace
@@ -152,6 +152,9 @@ au! BufNewFile,BufRead .rvmrc set filetype=zsh
 au! BufNewFile,BufRead ~/.zsh/* set filetype=zsh
 au! BufNewFile,BufRead *.md set filetype=markdown
 au! BufNewFile,BufRead Gemfile,*.ru set filetype=ruby
+au! BufNewFile,BufRead *.haml.deface set ft=haml
+au! BufNewFile,BufRead *.html.erb.deface set ft=eruby
+au BufRead,BufNewFile *.hamlc set ft=haml
 au FileType crontab set nobackup nowritebackup
 
 if has("autocmd")
