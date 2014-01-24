@@ -28,3 +28,6 @@
 [submodule "plugins/endwise"]
 	path = plugin/endwise
 	url = https://github.com/tpope/vim-endwise.git
+[submodule "bundle/mustache"]
+	path = bundle/mustache
+	url = git://github.com/mustache/vim-mustache-handlebars.git
