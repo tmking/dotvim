@@ -22,6 +22,9 @@ set binary noeol
 " make that backspace key work the way it should
 set backspace=indent,eol,start
 
+" enable the use of the scroll wheel
+set mouse=a
+
 " swap file directory
 set directory=$HOME/.vim/tmp
 
@@ -30,6 +33,11 @@ set backupdir=$HOME/.vim/tmp
 
 " set location of tags
 set tags=$HOME/.vim/docs/mytags
+
+set foldmethod=indent
+set foldlevel=99
+
+set clipboard=unnamed
 
 " pathogen
 filetype off
@@ -91,11 +99,11 @@ set formatoptions=qrn1
 "set laststatus=2
 set statusline=%<%F%=\ [%M%R%H%Y]\ (%(%l,%c%))
 
-if has ("gui_macvim")
+"if has ("gui_macvim")
   colorscheme twilight
-else
-  colorscheme desert256
-endif
+"else
+  "colorscheme desert256
+"endif
 
 " automatically strip trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
@@ -134,8 +142,9 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
+nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
 map <leader><TAB> :NERDTreeToggle<cr>
-map <leader>b :buffers<cr>
+map <leader>b :BufExplorer<cr>
 map <leader>j :bp<cr>
 map <leader>k :bn<cr>
 " use undo files
