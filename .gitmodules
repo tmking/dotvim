@@ -31,3 +31,9 @@
 [submodule "bundle/mustache"]
 	path = bundle/mustache
 	url = git://github.com/mustache/vim-mustache-handlebars.git
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = git@github.com:vim-ruby/vim-ruby.git
