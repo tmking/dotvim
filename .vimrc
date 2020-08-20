@@ -37,7 +37,7 @@ set tags=$HOME/.vim/docs/mytags
 set foldmethod=indent
 set foldlevel=99
 
-set clipboard=unnamed
+"set clipboard=unnamed
 
 " pathogen
 filetype off
